@@ -13,17 +13,37 @@ module.exports = {
       },
       {
         test: /\.(svg|eot|ttf|woff|woff2)?$/,
-        loader: 'url-loader',
+        exclude: [/images/],
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              outputPath: 'fonts/',
+              name: '[name][hash].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.(jpg|png)$/,
         loader: 'url-loader',
       },
       {
-        loader: 'react-svg-loader',
-        options: {
-          jsx: true, // true outputs JSX tags
-        },
+        test: /\.(svg)$/,
+        exclude: [
+          /fonts/,
+        ] /* dont want svg fonts from fonts folder to be included */,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: true, // true outputs JSX tags
+            },
+          },
+        ],
       },
     ],
   },
