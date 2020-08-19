@@ -1,0 +1,7 @@
+public/
+build/
+node_modules/
+internals/
+
+*mock.js
+*test.js

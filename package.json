@@ -1,0 +1,50 @@
+{
+  "name": "webpack-react-starter",
+  "version": "1.0.0",
+  "description": "webpack react starter",
+  "main": "index.js",
+  "repository": "https://github.com/dshlass/webpack-react-starter",
+  "author": "Dale Shlass",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack/webpack.config.js --env.env=dev",
+    "build": "webpack --config webpack/webpack.config.js --env.env=prod",
+    "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "dotenv-webpack": "^2.0.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "html-webpack-plugin": "^4.3.0",
+    "prettier": "^2.0.5",
+    "react-hot-loader": "^4.12.21",
+    "react-svg-loader": "^3.0.3",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.2",
+    "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  }
+}
